@@ -1,4 +1,14 @@
-:root {
-    
+:root{
+    --bg-transparent: transparent;
+    --fontColor: #484242;
+    --btn-secondary: #b697c142;
+    --btn-equal: #b697c1d9;
+    --bg: #000;
+}
+.theme-light{
+    --calculator-bg :  transparent;
+}
+.theme-dark{
+    --calculator-bg : #000;
 }
   
