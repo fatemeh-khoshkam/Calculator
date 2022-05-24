@@ -1,0 +1,11 @@
+{
+ "name": "App",
+ "icons": [
+  {
+   "src": "/icons8-calculator-bubbles-192.png",
+   "sizes": "192x192",
+   "type": "image/png",
+   "density": "4.0"
+  }
+ ]
+}
