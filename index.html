@@ -64,46 +64,67 @@
                         <i class="far fa-sun btn-light theme--active"></i>
                         <i class="far fa-moon btn-dark"></i>
                     </div>
-                    <div class="calculator__rotate">
+                    <!--                     <div class="calculator__rotate">
                         <i class="fas fa-undo-alt"></i>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="calculator--bottom">
-                <div class="calculator__showNum"></div>
+                <div class="calculator__showNum">
+                    <input type="text" class="showNum" placeholder="0" />
+                </div>
                 <div class="calculator__numbers">
-                    <button class="btn btn-secondary empty">C</button>
-                    <button class="btn btn-secondary">
+                    <button data-value="C" class="btn btn-secondary empty">
+                        C
+                    </button>
+                    <button data-value="plus-minus" class="btn btn-secondary">
                         <i class="fa-solid fa-plus-minus"></i>
                     </button>
-                    <button class="btn btn-secondary">
-                        <i class="fa-solid fa-percent"></i>
+                    <button
+                        data-value="percent"
+                        class="btn btn-secondary operatorKey"
+                    >
+                        %
                     </button>
-                    <button class="btn btn-primary">7</button>
-                    <button class="btn btn-primary">8</button>
-                    <button class="btn btn-primary">9</button>
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-divide"></i>
+                    <button class="btn btn-primary numKey">7</button>
+                    <button class="btn btn-primary numKey">8</button>
+                    <button class="btn btn-primary numKey">9</button>
+                    <button
+                        data-value="divide"
+                        class="btn btn-secondary operatorKey"
+                    >
+                        /
                     </button>
-                    <button class="btn btn-primary">4</button>
-                    <button class="btn btn-primary">5</button>
-                    <button class="btn btn-primary">6</button>
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-times"></i>
+                    <button class="btn btn-primary numKey">4</button>
+                    <button class="btn btn-primary numKey">5</button>
+                    <button class="btn btn-primary numKey">6</button>
+                    <button
+                        data-value="*"
+                        class="btn btn-secondary operatorKey"
+                    >
+                        *
                     </button>
-                    <button class="btn btn-primary">1</button>
-                    <button class="btn btn-primary">2</button>
-                    <button class="btn btn-primary">3</button>
-                    <button class="btn btn-secondary">
-                        <i class="fas fa-minus"></i>
+                    <button class="btn btn-primary numKey">1</button>
+                    <button class="btn btn-primary numKey">2</button>
+                    <button class="btn btn-primary numKey">3</button>
+                    <button
+                        data-value="minus"
+                        class="btn btn-secondary operatorKey"
+                    >
+                        -
                     </button>
-                    <button class="btn btn-primary">
+                    <button data-value="delete" class="btn btn-primary delete">
                         <i class="fa-solid fa-delete-left"></i>
                     </button>
-                    <button class="btn btn-primary">0</button>
-                    <button class="btn btn-primary">.</button>
-                    <button class="btn btn-secondary plus">
-                        <i class="fa-solid fa-plus"></i>
+                    <button class="btn btn-primary numKey">0</button>
+                    <button data-value="dot" class="btn btn-primary numKey">
+                        .
+                    </button>
+                    <button
+                        data-value="plus"
+                        class="btn btn-secondary plus operatorKey"
+                    >
+                        +
                     </button>
                     <button class="btn equal btn-primary">=</button>
                 </div>

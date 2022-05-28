@@ -1,3 +1,5 @@
+'use strict'
+
 /* clock of calculator */
 function currentTime() {
     let date = new Date();
@@ -76,3 +78,32 @@ function toggleTheme() {
    }
 })();
 document.querySelector('.calculator__theme').addEventListener("click", toggleTheme); */
+
+const input = document.querySelector('.showNum');
+const result = document.querySelector('.equal');
+const numKeys = document.querySelectorAll('.numKey');
+const clearKey = document.querySelector('.empty');
+const operatorKeys = document.querySelectorAll('.operatorKey');
+const deleteKey = document.querySelector('.delete');
+
+numKeys.forEach(num => {
+  num.addEventListener("click",() =>{
+    //add trim function to delete space of innerhtml
+    input.value += num.innerHTML.trim(); 
+  });
+});
+
+clearKey.addEventListener("click",() =>{
+  input.value = '';
+});
+
+operatorKeys.forEach(operator =>{
+  operator.addEventListener("click",() =>{
+    //add trim function to delete space of innerhtml
+    input.value += operator.innerHTML.trim(); 
+  })
+});
+
+deleteKey.addEventListener("click",() =>{
+   input.value = input.value.slice(0, -1);
+});

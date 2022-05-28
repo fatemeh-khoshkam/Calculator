@@ -58,6 +58,8 @@
 }
 .calculator__showNum{
     height: 25%;
+    display: flex;
+    align-items: flex-end;
 }
 .equal{
     background: #b697c1d9;
@@ -69,4 +71,12 @@
 .plus{
     grid-row: 5/7;
     grid-column: 4/5;
+}
+.calculator__showNum input{
+    width: 100%;
+    padding: 1.5rem 2rem;
+    background-color: transparent;
+    text-align: end;
+    font-size: 3rem;
+    border: 0;
 }
