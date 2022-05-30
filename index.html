@@ -46,6 +46,7 @@
     <body>
         <section class="calculator">
             <div class="calculator--top">
+                <div class="calculator__touch"></div>
                 <div class="calculator__statusBar">
                     <timer class="calculator__timer" id="clock"></timer>
                     <div class="calculator__icons">
@@ -117,9 +118,7 @@
                         <i class="fa-solid fa-delete-left"></i>
                     </button>
                     <button class="btn btn-primary numKey">0</button>
-                    <button data-value="dot" class="btn btn-primary numKey">
-                        .
-                    </button>
+                    <button class="btn btn-primary dot">.</button>
                     <button
                         data-value="plus"
                         class="btn btn-secondary plus operatorKey"

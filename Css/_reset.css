@@ -16,8 +16,9 @@ html {
 }
 
 body {
+  transition: all 1s ease;
   font-size: 1.5rem;
-  background-color: #f9f9f9;
+  background-color: #545b5b;
   overflow-x: hidden;
 }
 

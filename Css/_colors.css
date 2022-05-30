@@ -6,9 +6,5 @@
     --bg: #000;
 }
 .theme-light{
-    --calculator-bg :  transparent;
+    --calculator-bg :  var(--bg-transparent);
 }
-.theme-dark{
-    --calculator-bg : #000;
-}
-  

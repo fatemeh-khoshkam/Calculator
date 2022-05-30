@@ -32,65 +32,59 @@ currentTime();
 const body = document.querySelector("body");
 const btnLight = document.querySelector(".btn-light");
 const btnDark = document.querySelector(".btn-dark");
+const theme = localStorage.getItem("theme");
 
-/* const switchThemeFunc = function () {
-  const turnDarkMode = function () {
-    console.log('1')
-    body.classList.add("dark-mode");
-    btnLight.classList.remove("theme--active");
-    btnDark.classList.add("theme--active");  
-  };
-  const turnLightMode = function () {  
-    body.classList.remove("dark-mode");
+const switchThemeFunc = function () {
+  const turnLightMode = function () {
+    body.classList.remove("theme-dark");
     btnDark.classList.remove("theme--active");
-    btnLight.classList.add("theme--active");
+    btnLight.classList.add("theme--active"); 
+    localStorage.setItem("theme", "theme-light");
   };
-
-  if (btnLight.classList.contains("theme--active")) {    
+  const turnDarkMode = function () {
+    body.classList.add("theme-dark");
+    btnDark.classList.add("theme--active");
+    btnLight.classList.remove("theme--active"); 
+    localStorage.setItem("theme", "theme-dark");
+  };
+  if (btnDark.classList.contains("theme--active")) {
     turnLightMode();
-  } else {  
+  } else {
     turnDarkMode();
   }
 };
 btnLight.addEventListener("click", switchThemeFunc);
-btnDark.addEventListener("click", switchThemeFunc); */
+btnDark.addEventListener("click", switchThemeFunc);
 
+if (theme) {
+  body.classList.add(theme);
+  if (body.classList.contains("theme-dark")) {
+    switchThemeFunc();
+  }
+} 
 
-// function to set a given theme/color-scheme
-/* function setTheme(themeName) {
-    localStorage.setItem('theme', themeName);
-    document.documentElement.className = themeName;
-}
-// function to toggle between light and dark theme
-function toggleTheme() {
-   if (localStorage.getItem('theme') === 'theme-dark'){
-       setTheme('theme-dark');
-   } else {
-       setTheme('theme-light');
-   }
-}
-// Immediately invoked function to set the theme on initial load
-(function () {
-   if (localStorage.getItem('theme') === 'theme-dark') {
-       setTheme('theme-dark');
-   } else {
-       setTheme('theme-light');
-   }
-})();
-document.querySelector('.calculator__theme').addEventListener("click", toggleTheme); */
-
+///calculate
 const input = document.querySelector('.showNum');
 const result = document.querySelector('.equal');
 const numKeys = document.querySelectorAll('.numKey');
 const clearKey = document.querySelector('.empty');
 const operatorKeys = document.querySelectorAll('.operatorKey');
 const deleteKey = document.querySelector('.delete');
+const dotKey = document.querySelector('.dot');
 
 numKeys.forEach(num => {
   num.addEventListener("click",() =>{
     //add trim function to delete space of innerhtml
     input.value += num.innerHTML.trim(); 
   });
+
+});
+
+dotKey.addEventListener("click", () => {
+  const inputStr = input.value;
+  if (!inputStr.includes(".")) {
+    input.value += ".";
+  }
 });
 
 clearKey.addEventListener("click",() =>{
@@ -102,8 +96,13 @@ operatorKeys.forEach(operator =>{
     //add trim function to delete space of innerhtml
     input.value += operator.innerHTML.trim(); 
   })
+
 });
 
 deleteKey.addEventListener("click",() =>{
+   //delete end num/operator of input value
    input.value = input.value.slice(0, -1);
 });
+
+
+
