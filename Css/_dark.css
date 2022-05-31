@@ -27,6 +27,9 @@ body.theme-dark{
 .theme-dark .calculator__history,.theme-dark .calculator__rotate{
     box-shadow: #ffffff38 0rem 0rem 1rem 0;
 }
-.theme-dark .calculator__showNum input{
+.theme-dark .calculator__showNum .showNum{
     color: snow;
+}
+.theme-dark .calculator__showNum .showNumSmall {
+    color: #fffafaa3;
 }

@@ -63,6 +63,8 @@
     height: 25%;
     display: flex;
     align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .equal{
     background: #b697c1d9;
@@ -113,4 +115,10 @@
     left: -12px;
     border-radius: 50%;
     box-shadow: 5px -5px 0 -3px #545b5b;
+}
+.showNumSmall{
+    font-size: 1.5rem !important;
+    padding-bottom: 0 !important;
+    padding-right: 2.5rem !important;
+    color: #a8a1a1;
 }
