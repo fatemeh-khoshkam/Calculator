@@ -53,6 +53,7 @@ numKeys.forEach(num => {
     input.value += num.innerHTML.trim(); 
     inputSmall.value += num.innerHTML.trim();
     inputSmallStr = inputSmall.value; 
+    checkLengthInputNum();
   });
 });
 
@@ -63,13 +64,7 @@ dotKey.addEventListener("click", () => {
       inputSmall.value += ".";
       inputSmallStr = inputSmall.value;
     }
-    if(checkLastCharInput() == 'operator'){
-      input.value += "";
-      inputSmall.value += "";
-      inputSmallStr = inputSmall.value;
-    }
-    if(checkLastCharInput() == 'dot'){
-      input.value += "";
+    if(checkLastCharInput() == 'operator'|| checkLastCharInput() == 'dot'){
       inputSmall.value += "";
       inputSmallStr = inputSmall.value;
     }
@@ -83,12 +78,7 @@ operatorKeys.forEach(operator =>{
         inputSmallStr = inputSmall.value;
         input.value = "";
       }
-      if(checkLastCharInput() == 'operator'){
-        inputSmall.value += "";
-        inputSmallStr = inputSmall.value;
-        input.value = "";
-      }
-      if(checkLastCharInput() == 'dot'){
+      if(checkLastCharInput() == 'operator'|| checkLastCharInput() == 'dot'){
         inputSmall.value += "";
         inputSmallStr = inputSmall.value;
         input.value = "";
@@ -97,6 +87,7 @@ operatorKeys.forEach(operator =>{
 });
 function checkLastCharInput(){
   let lastChar = inputSmallStr.charAt(inputSmallStr.length - 1);
+  let firstChar = inputSmallStr.charAt(0);
   if(!isNaN(lastChar)){
     return 'number';
   }
@@ -107,20 +98,35 @@ function checkLastCharInput(){
     return 'dot';
   }
 }
-
+function checkLengthInputNum(){
+  if(input.value.length>12){
+    input.classList.add('text-md');
+    input.classList.remove('text-sm');
+  }
+  if(input.value.length>21){
+    input.classList.remove('text-md');
+    input.classList.add('text-sm');
+  }
+  if(input.value.length<12){
+    input.classList.remove('text-md');
+    input.classList.remove('text-sm');
+  }
+}
 result.addEventListener('click',()=>{
- /*  checkLastCharInput();  */
+  input.value = eval(inputSmallStr);
 })
 
 deleteKey.addEventListener("click",() =>{
   //delete end num/operator of input value
   input.value = input.value.slice(0, -1);
   inputSmall.value = inputSmall.value.slice(0, -1);
+  checkLengthInputNum();
 });
 
 clearKey.addEventListener("click",() =>{
   input.value = '';
   inputSmall.value = '';
+  checkLengthInputNum();
 });
 
 

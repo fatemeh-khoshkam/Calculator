@@ -122,3 +122,9 @@
     padding-right: 2.5rem !important;
     color: #a8a1a1;
 }
+.text-md{
+    font-size: 2.2rem !important;
+}
+.text-sm{
+    font-size: 1.5rem !important;
+}
