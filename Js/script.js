@@ -58,30 +58,52 @@ numKeys.forEach(num => {
 
 dotKey.addEventListener("click", () => { 
   if (!inputStr.includes(".")) {
-    input.value += ".";
-    inputSmall.value += ".";
-    inputSmallStr = inputSmall.value;
+    if(checkLastCharInput() == 'number'){
+      input.value += ".";
+      inputSmall.value += ".";
+      inputSmallStr = inputSmall.value;
+    }
+    if(checkLastCharInput() == 'operator'){
+      input.value += "";
+      inputSmall.value += "";
+      inputSmallStr = inputSmall.value;
+    }
+    if(checkLastCharInput() == 'dot'){
+      input.value += "";
+      inputSmall.value += "";
+      inputSmallStr = inputSmall.value;
+    }
   }
 });
 
 operatorKeys.forEach(operator =>{
   operator.addEventListener("click",() =>{
-      inputSmall.value += operator.innerHTML.trim();
-      inputSmallStr = inputSmall.value;
+      if(checkLastCharInput() == 'number'){
+        inputSmall.value += operator.innerHTML.trim();
+        inputSmallStr = inputSmall.value;
+        input.value = "";
+      }
+      if(checkLastCharInput() == 'operator'){
+        inputSmall.value += "";
+        inputSmallStr = inputSmall.value;
+        input.value = "";
+      }
+      if(checkLastCharInput() == 'dot'){
+        inputSmall.value += "";
+        inputSmallStr = inputSmall.value;
+        input.value = "";
+      }
   })
 });
 function checkLastCharInput(){
   let lastChar = inputSmallStr.charAt(inputSmallStr.length - 1);
   if(!isNaN(lastChar)){
-    console.log('number');
     return 'number';
   }
   else if((lastChar == '/') || (lastChar == '+')  || (lastChar == '-')  || (lastChar == '%')){
-    console.log('operator');
     return 'operator';
   }
   else if((lastChar == '.')){
-    console.log('dot');
     return 'dot';
   }
 }
