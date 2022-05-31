@@ -129,6 +129,14 @@ clearKey.addEventListener("click",() =>{
   checkLengthInputNum();
 });
 
+input.addEventListener('keydown', function(e) {
+  const key = e.key;
+  if (key === "Backspace") {
+    input.value = '';
+    inputSmall.value = '';
+    checkLengthInputNum();
+  }
+});
 
 /* clock of calculator */
 (function () {

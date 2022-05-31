@@ -2,8 +2,9 @@ body.theme-dark{
     color: snow;
 }
 .theme-dark .calculator{
-    box-shadow: #88888899 0 8px 8px 0;
+    box-shadow: #4a474799 0 8px 8px 0;
     background-color: #2a3333;
+    
 }
 .theme-dark .btn-secondary {
     background: #b697c196;

@@ -18,19 +18,23 @@ html {
 body {
   transition: all 1s ease;
   font-size: 1.5rem;
-  background-color: #545b5b;
+  background-color: #c8c5cb;
   overflow-x: hidden;
-}
 
+}
+.container{
+  padding: 1rem;
+  background-image: url(../Images/Background\ \(1\).png);
+}
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 0.5rem;
   height: 4rem;
 }
 ::-webkit-scrollbar-track {
-  background: var(--white-color);
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(107, 155, 252, 0.623);
+  background-color: #9c54a6b3;
   border-radius: 2rem;
 }
 a {
@@ -53,24 +57,4 @@ textarea {
 input:focus {
   transition: all 0.3s ease-in-out;
   outline: 0;
-}
-
-/* Container Media Query */
-@media only screen and (max-width: 1700px) {
-
-}
-@media only screen and (max-width: 1400px) {
-
-}
-@media only screen and (max-width: 1200px) {
-
-}
-@media only screen and (max-width: 992px) {
-
-}
-@media only screen and (max-width: 768px) {
-
-}
-@media only screen and (max-width: 576px) {
-
 }

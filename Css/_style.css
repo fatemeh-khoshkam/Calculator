@@ -6,7 +6,7 @@
     height: calc(55rem + 5vh);
     margin: 5rem auto;
     border-radius: 2.5rem;
-    box-shadow: #d5d5d545 0 10px 1rem 0;
+    box-shadow:#413f3fad 0 10px 1rem 0;
 }
 .calculator__statusBar{
     display: flex;
@@ -92,7 +92,7 @@
     width: 16rem;
     height: 2rem;
     border-radius: 0 0 20px 20px;
-    background-color: #545b5b;
+    background-color: #c8c5cb;
 }
 .calculator__touch:before {
     content: "";
@@ -103,7 +103,7 @@
     position: absolute;
     right: -12px;
     border-radius: 50%;
-    box-shadow: -4px -4px 0 -3px #545b5b;
+    box-shadow: -4px -4px 0 -3px #c8c5cb;
 }
 .calculator__touch:after {
     content: "";
@@ -114,7 +114,7 @@
     position: absolute;
     left: -12px;
     border-radius: 50%;
-    box-shadow: 5px -5px 0 -3px #545b5b;
+    box-shadow: 5px -5px 0 -3px #c8c5cb;
 }
 .showNumSmall{
     font-size: 1.5rem !important;
