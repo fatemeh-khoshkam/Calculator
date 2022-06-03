@@ -58,17 +58,17 @@ numKeys.forEach(num => {
 });
 
 dotKey.addEventListener("click", () => { 
-  if (!inputStr.includes(".")) {
     if(checkLastCharInput() == 'number'){
-      input.value += ".";
-      inputSmall.value += ".";
-      inputSmallStr = inputSmall.value;
+      if (!input.value.includes(".")) {
+        input.value += ".";
+        inputSmall.value += ".";
+        inputSmallStr = inputSmall.value;
+      }
     }
     if(checkLastCharInput() == 'operator'|| checkLastCharInput() == 'dot'){
       inputSmall.value += "";
       inputSmallStr = inputSmall.value;
     }
-  }
 });
 
 operatorKeys.forEach(operator =>{
