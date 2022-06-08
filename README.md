@@ -3,7 +3,7 @@
 # calculator
 > you can see demo here :eyes: : https://fatemeh-khoshkam-calculator.netlify.app/ 
 
-## General info
+## General info [^note]:
 This project is a simple calculator :abacus:	
 <br>
 with dark and light theme :crescent_moon: :sunny:	
@@ -22,3 +22,5 @@ Project is created with:
 Feel free to fix bugs or improvements :relaxed:.<br>
 Any kind of help is appreciated! :raised_hands:	<br>
 If you make any kind of changes to an existing template, please commit them as a new template.
+
+[^note]:some features of this project is not complete and I work on it.
