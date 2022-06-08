@@ -3,11 +3,6 @@
 # calculator
 > you can see demo here :eyes: : https://fatemeh-khoshkam-calculator.netlify.app/ 
 
-## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Contribution](#contribution)
-
 ## General info
 This project is a simple calculator :abacus:	
 <br>
