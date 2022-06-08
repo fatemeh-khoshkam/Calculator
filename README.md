@@ -6,12 +6,12 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Contribution](#Contribution)
+* [Contribution](#contribution)
 
 ## General info
 This project is a simple calculator :abacus:	
 <br>
-with dark and light theme :crescent_moon:	:sunny:	
+with dark and light theme :crescent_moon: :sunny:	
 <br>
 also it has history of results :page_facing_up:	
 	
