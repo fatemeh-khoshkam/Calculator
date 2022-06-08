@@ -27,8 +27,8 @@ body {
   background-image: url(../Images/Background\ \(1\).png);
 }
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 4rem;
+  width: 0.5rem;/* 
+  height: 4rem; */
 }
 ::-webkit-scrollbar-track {
   background: transparent;
@@ -36,7 +36,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #9c54a6b3;
   border-radius: 2rem;
-}
+} 
 a {
   text-decoration: none;
 }

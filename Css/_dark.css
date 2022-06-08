@@ -34,3 +34,6 @@ body.theme-dark{
 .theme-dark .calculator__showNum .showNumSmall {
     color: #fffafaa3;
 }
+.theme-dark .history {
+    background-color: #4f4d4de3;
+}

@@ -36,6 +36,9 @@ if (theme) {
 } 
 
 ///calculate
+const historyBtn = document.querySelector('.calculator__history');
+const backgroundTrans = document.querySelector('.bg-trans');
+const history = document.querySelector('.history');
 const input = document.querySelector('.showNum');
 const result = document.querySelector('.equal');
 const numKeys = document.querySelectorAll('.numKey');
@@ -114,6 +117,7 @@ function checkLengthInputNum(){
 }
 result.addEventListener('click',()=>{
   input.value = eval(inputSmallStr);
+  checkLengthInputNum();
 })
 
 deleteKey.addEventListener("click",() =>{
@@ -136,6 +140,16 @@ input.addEventListener('keydown', function(e) {
     inputSmall.value = '';
     checkLengthInputNum();
   }
+});
+
+/*  History */
+historyBtn.addEventListener("click", () => {
+  history.classList.toggle("history--active");
+  backgroundTrans.classList.remove('d-none');
+});
+backgroundTrans.addEventListener("click", () => {
+  history.classList.toggle("history--active");
+  backgroundTrans.classList.add('d-none');
 });
 
 /* clock of calculator */
